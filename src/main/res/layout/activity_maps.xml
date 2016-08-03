@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.artfonapps.hotelstask.views.MapsActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </fragment>
+    <ImageButton android:layout_marginBottom="@dimen/navigate_button_bottom_margin"
+        android:layout_marginRight="@dimen/navigate_button_right_margin"
+        android:id="@+id/navigateButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/navigate_button_width" android:background="@null"
+        android:layout_height="@dimen/navigate_button_height" android:scaleType="fitXY"
+        android:onClick="navigateClk"
+        android:src="@drawable/navigate2"/>
+</RelativeLayout>

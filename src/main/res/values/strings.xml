@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Paper Rose Hotels</string>
+
+    <string name="sort_none">Отсутствует</string>
+    <string name="sort_star_up">Количество звезд ▲</string>
+    <string name="sort_star_down">Количество звезд ▼</string>
+    <string name="sort_distance_up">Расстояние до центра ▲</string>
+    <string name="sort_distance_down">Расстояние до центра ▼</string>
+
+    <string-array name="sort_types">
+        <item>@string/sort_none</item>
+        <item>@string/sort_star_up</item>
+        <item>@string/sort_star_down</item>
+        <item>@string/sort_distance_up</item>
+        <item>@string/sort_distance_down</item>
+
+    </string-array>
+</resources>
