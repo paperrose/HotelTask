@@ -597,7 +597,7 @@ InAppStoryManager.getInstance().shareCallback = new InAppStoryManager.ShareCallb
 ```
 
 From version 1.4.0 you also can use callbacks instead of events. There are 2 types of callbacks - for InAppStoryManager and for StoriesList.
-# InAppStoryManager callbacks:
+#### InAppStoryManager callbacks:
 1) 
 ```
     InAppStoryManager.getInstance().setShowStoryCallback(ShowStoryCallback showStoryCallback); 
@@ -802,7 +802,7 @@ Enums used in methods:
     }
 ```
 
-# StoriesList callback:
+#### StoriesList callback:
 
 ```
 storiesList.setCallback(ListCallback callback);
