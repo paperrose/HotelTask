@@ -921,9 +921,9 @@ public ICustomGoodsItem get() {
     };
 }
 ```
-In method `getSkus()` you get ids for goods items. When you get data for this items from your application, you should create array of GoodsItemData items and call getGoodsDataCallback.onSuccess(ArrayList<GoodsItemData> data). Also in case of any error in retreiving data for items, you should call getGoodsDataCallback.onError().
+In method `getSkus()` you get ids for goods items. When you get data for this items from your application, you should create array of GoodsItemData items and call getGoodsDataCallback.onSuccess(ArrayList<GoodsItemData> data). Also in case of any error in retreiving data for items, you should call `getGoodsDataCallback.onError().`
 Here is an example for this method:
-
+```
 @Override
 public void getSkus(ArrayList<String> skus, GetGoodsDataCallback callback) {
     ArrayList<GoodsItemData> goodsItemData = new ArrayList<>();
