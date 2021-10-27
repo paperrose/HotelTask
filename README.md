@@ -600,25 +600,25 @@ From version 1.4.0 you also can use callbacks instead of events. There are 2 typ
 #### InAppStoryManager callbacks:
 1) 
 ```
-    InAppStoryManager.getInstance().setShowStoryCallback(ShowStoryCallback showStoryCallback); 
-    //equivalent to 'ShowStory' event
+InAppStoryManager.getInstance().setShowStoryCallback(ShowStoryCallback showStoryCallback); 
+//equivalent to 'ShowStory' event
 
-    public interface ShowStoryCallback {
+public interface ShowStoryCallback {
         void showStory(int id,
                    String title,
                    String tags,
                    int slidesCount,
                    SourceType source);
-    }
+}
 
 ```
 
 2) 
 ```
-    InAppStoryManager.getInstance().setCloseStoryCallback(CloseStoryCallback closeStoryCallback); 
+InAppStoryManager.getInstance().setCloseStoryCallback(CloseStoryCallback closeStoryCallback); 
     //equivalent to 'CloseStory' event
 
-    public interface CloseStoryCallback {
+public interface CloseStoryCallback {
 
         void closeStory(int id,
                     String title,
@@ -627,16 +627,16 @@ From version 1.4.0 you also can use callbacks instead of events. There are 2 typ
                     int index,
                     CloseReader action,
                     SourceType source);
-    }
+}
 
 ```
 
 3) 
 ```
-    InAppStoryManager.getInstance().setCallToActionCallback(CallToActionCallback callToActionCallback); 
-    //equivalent to 'CallToAction' event
+InAppStoryManager.getInstance().setCallToActionCallback(CallToActionCallback callToActionCallback); 
+//equivalent to 'CallToAction' event
 
-    public interface CallToActionCallback {
+public interface CallToActionCallback {
         void callToAction(int id,
                       String title,
                       String tags,
@@ -644,46 +644,46 @@ From version 1.4.0 you also can use callbacks instead of events. There are 2 typ
                       int index,
                       String link,
                       ClickAction action);
-    }
+}
 
 ```
 
 4) 
 ```
-    InAppStoryManager.getInstance().setShowSlideCallback(ShowSlideCallback showSlideCallback); 
-    //equivalent to 'ShowSlide' event
+InAppStoryManager.getInstance().setShowSlideCallback(ShowSlideCallback showSlideCallback); 
+//equivalent to 'ShowSlide' event
 
-    public interface ShowSlideCallback {
+public interface ShowSlideCallback {
         void showSlide(int id,
                    String title,
                    String tags,
                    int slidesCount,
                    int index);
-    }
+}
 
 ```
 
 5) 
 ```
-    InAppStoryManager.getInstance().setClickOnShareStoryCallback(ClickOnShareStoryCallback clickOnShareStoryCallback); 
-    //equivalent to 'ClickOnShareStory' event
+InAppStoryManager.getInstance().setClickOnShareStoryCallback(ClickOnShareStoryCallback clickOnShareStoryCallback); 
+//equivalent to 'ClickOnShareStory' event
 
-    public interface ClickOnShareStoryCallback {
+public interface ClickOnShareStoryCallback {
         void shareClick(int id,
                     String title,
                     String tags,
                     int slidesCount,
                     int index);
-    }
+}
 
 ```
 
 6) 
 ```
-    InAppStoryManager.getInstance().setLikeDislikeStoryCallback(LikeDislikeStoryCallback likeDislikeStoryCallback); 
-    //equivalent to 'LikeStory' and 'DislikeStory' event
+InAppStoryManager.getInstance().setLikeDislikeStoryCallback(LikeDislikeStoryCallback likeDislikeStoryCallback); 
+//equivalent to 'LikeStory' and 'DislikeStory' event
 
-    public interface LikeDislikeStoryCallback {
+public interface LikeDislikeStoryCallback {
         void likeStory(int id,
                    String title,
                    String tags,
@@ -697,56 +697,56 @@ From version 1.4.0 you also can use callbacks instead of events. There are 2 typ
                       int slidesCount,
                       int index,
                       boolean value);
-    }
+}
 
 ```
 
 7) 
 ```
-    InAppStoryManager.getInstance().setFavoriteStoryCallback(FavoriteStoryCallback favoriteStoryCallback); 
-    //equivalent to 'FavoriteStory' event
+InAppStoryManager.getInstance().setFavoriteStoryCallback(FavoriteStoryCallback favoriteStoryCallback); 
+//equivalent to 'FavoriteStory' event
 
-    public interface FavoriteStoryCallback {
+public interface FavoriteStoryCallback {
         void favoriteStory(int id,
                        String title,
                        String tags,
                        int slidesCount,
                        int index,
                        boolean value);
-    }
+}
 
 ```
 
 8) 
 ```
-    InAppStoryManager.getInstance().setSingleLoadCallback(SingleLoadCallback singleLoadCallback) ; 
-    //equivalent to 'SingleLoad' event
+InAppStoryManager.getInstance().setSingleLoadCallback(SingleLoadCallback singleLoadCallback) ; 
+//equivalent to 'SingleLoad' event
 
     
-    public interface SingleLoadCallback {
+public interface SingleLoadCallback {
         void singleLoad(String storyId);
-    }
+}
 
 ```
 
 9) 
 ```
-    InAppStoryManager.getInstance().setOnboardingLoadCallback(OnboardingLoadCallback onboardingLoadCallback); 
-    //equivalent to 'OnboardingLoad' event
+InAppStoryManager.getInstance().setOnboardingLoadCallback(OnboardingLoadCallback onboardingLoadCallback); 
+//equivalent to 'OnboardingLoad' event
 
-    public interface OnboardingLoadCallback {
+public interface OnboardingLoadCallback {
         void onboardingLoad(int count);
-    }
+}
 
 ```
 
 10) 
 ```
-    InAppStoryManager.getInstance().setErrorCallback(ErrorCallback errorCallback); 
-    //equivalent to events that send different errors
-    //can be set with custom implementation or with ErrorCallbackAdapter class
+InAppStoryManager.getInstance().setErrorCallback(ErrorCallback errorCallback); 
+//equivalent to events that send different errors
+//can be set with custom implementation or with ErrorCallbackAdapter class
 
-    public interface ErrorCallback {
+public interface ErrorCallback {
         void loadListError();
         void loadOnboardingError();
         void loadSingleError();
@@ -755,17 +755,17 @@ From version 1.4.0 you also can use callbacks instead of events. There are 2 typ
         void emptyLinkError();
         void sessionError();
         void noConnection();
-    }
+}
 
 ```
 
 11) 
 ```
-    InAppStoryManager.getInstance().setGameCallback(GameCallback gameCallback); 
-    //equivalent to 'StartGame', 'CloseGame' and 'FinishGame' events
-    //can be set with custom implementation or with GameCallbackAdapter class
+InAppStoryManager.getInstance().setGameCallback(GameCallback gameCallback); 
+//equivalent to 'StartGame', 'CloseGame' and 'FinishGame' events
+//can be set with custom implementation or with GameCallbackAdapter class
 
-    public interface GameCallback {
+public interface GameCallback {
         void startGame(int id,
                        String title,
                        String tags,
@@ -784,22 +784,22 @@ From version 1.4.0 you also can use callbacks instead of events. There are 2 typ
                        String tags,
                        int slidesCount,
                        int index);
-    }
+}
 
 ```
 Enums used in methods:
 ```
-    public enum SourceType {
-        SINGLE, ONBOARDING, LIST, FAVORITE
-    }    
+public enum SourceType {
+    SINGLE, ONBOARDING, LIST, FAVORITE
+}    
 
-    public enum CloseReader {
-        AUTO, CLICK, SWIPE, CUSTOM
-    }
+public enum CloseReader {
+    AUTO, CLICK, SWIPE, CUSTOM
+}
 
-    public enum ClickAction {
-        BUTTON, SWIPE, GAME
-    }
+public enum ClickAction {
+    BUTTON, SWIPE, GAME
+}
 ```
 
 #### StoriesList callback:
@@ -819,7 +819,6 @@ public interface ListCallback {
                    int slidesCount, 
                    boolean isFavoriteList);
 }
-
 
 ```
 
