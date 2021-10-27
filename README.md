@@ -610,7 +610,6 @@ public interface ShowStoryCallback {
                    int slidesCount,
                    SourceType source);
 }
-
 ```
 
 2) 
@@ -628,7 +627,6 @@ public interface CloseStoryCallback {
                     CloseReader action,
                     SourceType source);
 }
-
 ```
 
 3) 
@@ -645,7 +643,6 @@ public interface CallToActionCallback {
                       String link,
                       ClickAction action);
 }
-
 ```
 
 4) 
@@ -660,7 +657,6 @@ public interface ShowSlideCallback {
                    int slidesCount,
                    int index);
 }
-
 ```
 
 5) 
@@ -675,7 +671,6 @@ public interface ClickOnShareStoryCallback {
                     int slidesCount,
                     int index);
 }
-
 ```
 
 6) 
@@ -698,7 +693,6 @@ public interface LikeDislikeStoryCallback {
                       int index,
                       boolean value);
 }
-
 ```
 
 7) 
@@ -714,7 +708,6 @@ public interface FavoriteStoryCallback {
                        int index,
                        boolean value);
 }
-
 ```
 
 8) 
@@ -726,7 +719,6 @@ InAppStoryManager.getInstance().setSingleLoadCallback(SingleLoadCallback singleL
 public interface SingleLoadCallback {
         void singleLoad(String storyId);
 }
-
 ```
 
 9) 
@@ -737,7 +729,6 @@ InAppStoryManager.getInstance().setOnboardingLoadCallback(OnboardingLoadCallback
 public interface OnboardingLoadCallback {
         void onboardingLoad(int count);
 }
-
 ```
 
 10) 
@@ -756,7 +747,6 @@ public interface ErrorCallback {
         void sessionError();
         void noConnection();
 }
-
 ```
 
 11) 
@@ -785,7 +775,6 @@ public interface GameCallback {
                        int slidesCount,
                        int index);
 }
-
 ```
 Enums used in methods:
 ```
@@ -819,7 +808,6 @@ public interface ListCallback {
                    int slidesCount, 
                    boolean isFavoriteList);
 }
-
 ```
 
 ### Stories Goods Widget
